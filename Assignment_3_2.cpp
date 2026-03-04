@@ -41,6 +41,7 @@ int main() {
 
     cout << "Array-2 : " << endl;
 
+    
     for (i = 1; i <= p; i++)
     {
         for (j = 1; j <= c; j++)
@@ -52,6 +53,7 @@ int main() {
     cout << endl;
 
     int add[r][c];
+
 
     cout<<"After Addition : "<<endl;
 

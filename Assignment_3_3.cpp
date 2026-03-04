@@ -51,6 +51,7 @@ int main()
     }
     cout << endl;
 
+    
     int multiply[r][c];
 
     for (i = 1; i <= r; i++)

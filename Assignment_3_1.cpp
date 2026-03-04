@@ -6,7 +6,8 @@ int main()
     int r, c, p, i, j;
     cin >> r >> c;
     int arr[r][c];
-
+ 
+    
     for (i = 1; i <= r; i++)
     {
         for (j = 1; j <= c; j++)
