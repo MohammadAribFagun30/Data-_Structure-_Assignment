@@ -6,9 +6,10 @@ int main()
     long long n, i, f = 0;
     cin >> n;
 
-    if(n<=2)
+    if (n < 2)
     {
-
+        cout << n << " is not prime" << endl;
+        return 0;
     }
 
     for (i = 2; i <= sqrt(n); i++)
