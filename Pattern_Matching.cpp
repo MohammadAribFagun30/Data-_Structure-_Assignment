@@ -32,6 +32,7 @@ int main()
             cout << "Found at index : " << index << endl;
             return 0;
         }
+
         k++;
     }
 

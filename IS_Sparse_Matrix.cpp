@@ -33,12 +33,10 @@ int main()
             {
                 count_zero++;
             }
-            else
-                cout_nonzero++;
         }
     }
 
-    if (count_zero > cout_nonzero)
+    if (count_zero > (r * c) / 2)
     {
         cout << "It is a Sparse Matrix !!" << endl;
     }
