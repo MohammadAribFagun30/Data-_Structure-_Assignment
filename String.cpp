@@ -6,7 +6,7 @@ int main()
     string s1;
     getline(cin, s1);
     int i = 0;
-
+    // Length of String
     while (s1[i] != '\0')
     {
         i++;
