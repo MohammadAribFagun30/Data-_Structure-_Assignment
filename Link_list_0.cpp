@@ -47,6 +47,7 @@ int main()
     int position = 1;
     bool found = false;
 
+    
     while (ptr != NULL)
     {
         if (ptr->number == ITEM)
