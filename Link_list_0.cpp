@@ -2,8 +2,8 @@
 using namespace std;
 struct Node
 {
-    int number;
-    Node *next;
+    int number; 
+    Node *next; 
 };
 int main()
 {
@@ -18,7 +18,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         cout << "Input a number : ";
-        cin >> ptr->number;
+        cin >> ptr->number; 
 
         if (i != n)
         {
@@ -28,7 +28,7 @@ int main()
     }
 
     ptr->next = NULL;
-
+    
     cout << "Elements in Link List are : ";
 
     ptr = start;
@@ -38,6 +38,7 @@ int main()
         cout << ptr->number << " ";
         ptr = ptr->next;
     }
+    
     cout << endl;
     int ITEM;
     cout << "Enter element to search: ";
