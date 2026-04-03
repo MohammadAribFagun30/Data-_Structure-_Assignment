@@ -38,6 +38,37 @@ int main()
         cout << ptr->number << " ";
         ptr = ptr->next;
     }
+    
+    cout << endl;
+    int ITEM;
+    cout << "Enter element to search: ";
+    cin >> ITEM;
+
+    ptr = start;
+    int position = 1;
+    bool found = false;
+
+    
+    while (ptr != NULL)
+    {
+        if (ptr->number == ITEM)
+        {
+            cout << "Item found..!" << endl;
+            cout << "Position: " << position << endl;
+            cout << "Address: " << ptr << endl;
+
+            found = true;
+            break;
+        }
+
+        ptr = ptr->next;
+        position++;
+    }
+
+    if (!found)
+    {
+        cout << "Item not found in the list";
+    }
 
     return 0;
 }
