@@ -18,6 +18,7 @@ int main()
     int end = last_position;
     int mid = int((begin + end) / 2);
 
+    cout << "Element to find : ";
     int x;
     cin >> x;
     int position;
