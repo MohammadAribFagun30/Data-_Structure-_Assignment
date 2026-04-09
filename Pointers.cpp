@@ -1,14 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+int main()
+{
     int a = 5;
-    
-    cout<<&a;
-    cout<<endl;
-    
+
+    cout << &a;
+
+    cout << endl;
+
     int *x = &a;
 
-    cout<<*x; 
+    cin >> *x;
     return 0;
 }

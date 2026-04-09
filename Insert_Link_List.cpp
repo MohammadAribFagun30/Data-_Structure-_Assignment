@@ -51,6 +51,7 @@ int main()
     Node *save;
 
     // FIND LOC
+
     if (start == NULL || x < start->num)
     {
         Loc = NULL;
@@ -87,9 +88,10 @@ int main()
     }
 
     ptr = start;
+    cout << "After Insertion : ";
     while (ptr != NULL)
     {
-        cout << "After Insertion : ";
+
         cout << ptr->num << " ";
         ptr = ptr->next;
     }

@@ -1,10 +1,16 @@
 #include <bits/stdc++.h>
 using namespace std;
-struct Node
+class Node
 {
-    int number; 
-    Node *next; 
+public:
+    int number;
+    Node *next;
 };
+// struct Node
+// {
+//     int number;
+//     Node *next;
+// };
 int main()
 {
     Node *start, *ptr;
@@ -18,7 +24,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         cout << "Input a number : ";
-        cin >> ptr->number; 
+        cin >> ptr->number;
 
         if (i != n)
         {
@@ -28,7 +34,7 @@ int main()
     }
 
     ptr->next = NULL;
-    
+
     cout << "Elements in Link List are : ";
 
     ptr = start;
