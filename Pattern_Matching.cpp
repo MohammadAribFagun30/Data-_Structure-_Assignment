@@ -10,35 +10,29 @@ int main()
     int l1 = s1.length();
     int l2 = s2.length();
 
-    int max = l1 - l2 + 1;
-    int index = -1;
-    int k = 1;
+    int max = l1 - l2;
 
-    while (k <= max)
+    for (int k = 0; k <= max; k++)
     {
         int f = 1;
 
-        for (int i = 1; i <= l2; i++)
+        for (int i = 0; i < l2; i++)
         {
-            if (s2[i] != s1[i + k - 1])
+            if (s2[i] != s1[i + k])
             {
                 f = 0;
                 break;
             }
         }
+
         if (f)
         {
-            index = k;
-            cout << "Found at index : " << index << endl;
+            cout << "Found at index : " << k << endl;
             return 0;
         }
-
-        k++;
     }
 
-    index = 0;
-    cout << "\nPattern not found" << endl;
-    return 0;
+    cout << "Pattern not found" << endl;
 
     return 0;
 }
