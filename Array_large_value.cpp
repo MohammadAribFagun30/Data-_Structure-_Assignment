@@ -14,7 +14,7 @@ int main()
 
     int position = 0;
     int index = 1;
-    int max = INT_MIN;
+    int max = arr[1];
 
     while (index <= n)
     {
