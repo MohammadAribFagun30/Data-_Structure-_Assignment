@@ -12,7 +12,7 @@ int main()
         cin >> arr[i];
     }
 
-    int position = 0;
+    int position = 1;
     int index = 1;
     int max = arr[1];
 
