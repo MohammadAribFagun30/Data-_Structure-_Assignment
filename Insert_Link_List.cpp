@@ -58,16 +58,19 @@ int main()
     }
     else
     {
-        save = start;
-        ptr = start->next;
+
+        // 10 20 30 50
+
+        save = start;      // 10
+        ptr = start->next; // 20
 
         while (ptr != NULL)
         {
             if (x < ptr->num)
                 break;
 
-            save = ptr;
-            ptr = ptr->next;
+            save = ptr;      // 20
+            ptr = ptr->next; // 30
         }
 
         Loc = save;

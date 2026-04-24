@@ -45,6 +45,23 @@ int main()
         cout << ptr->number << " ";
         ptr = ptr->next;
     }
+    cout << endl;
+
+    int x;
+    cout << "Enter element to search : ";
+    cin >> x;
+    ptr = start;
+    int pos = 1;
+
+    while (ptr != NULL)
+    {
+        if (x == ptr->number)
+        {
+            cout << "Found at position: " << pos << endl;
+        }
+        ptr = ptr->next;
+        pos++;
+    }
 
     return 0;
 }

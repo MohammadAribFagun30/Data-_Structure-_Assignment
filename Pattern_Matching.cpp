@@ -1,38 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    string s1, s2;
-    getline(cin, s1);
-    getline(cin, s2);
+    string t; // abcdef --- 6
+    cin >> t;
 
-    int l1 = s1.length();
-    int l2 = s2.length();
+    string p; // cd
+    cin >> p;
 
-    int max = l1 - l2;
+    int r = t.length(); // 6
+    int s = p.length(); // 2
 
-    for (int k = 0; k <= max; k++)
+    int k = 0;
+    int max = r - s + 1; // 6 - 2 + 1 == 5
+    int index = -1;
+
+    while (k < max) // 2 < 5
     {
-        int f = 1;
+        int l;
 
-        for (int i = 0; i < l2; i++)
+        for (l = 1; l <= s; l++) // 2
         {
-            if (s2[i] != s1[i + k])
+            if (p[l] != t[l + k]) // p[1] == d != t[3] == d
             {
-                f = 0;
                 break;
             }
         }
+        // l = 2
 
-        if (f)
+        if (l == s)
         {
-            cout << "Found at index : " << k << endl;
-            return 0;
+            index = k; // 2
+            break;
         }
+
+        k = k + 1;
     }
 
-    cout << "Pattern not found" << endl;
+    if (index > -1)
+    {
+        cout << "pattern found at index : " << index << endl;
+    }
+    else
+    {
+        cout << "Pattern not found\n";
+    }
 
     return 0;
 }
