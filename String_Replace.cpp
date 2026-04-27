@@ -1,46 +1,68 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    char T[100], P[50], Q[50];
-    cin.getline(T, 100);
-    cin.getline(P, 50);
-    cin.getline(Q, 50);
+    string s, p;
+    getline(cin, s);
+    getline(cin, p);
 
-    int i = 0, j, k, found = 0;
+    int s1 = s.length();
+    int s2 = p.length();
+    int max = s1 - s2 + 1;
 
-    while (T[i] != '\0')
+    bool flag = false;
+    int loc = -1;
+
+    for (int i = 0; i < max; i++)
     {
-        j = 0;
+        int l;
 
-        // check if P matches starting at T[i]
-        while (P[j] != '\0' && T[i + j] == P[j])
+        for (l = 0; l < s2; l++)
         {
-            j++;
-        }
-
-        // if full pattern matched and not replaced yet
-        if (P[j] == '\0' && found == 0)
-        {
-            k = 0;
-
-            // print replacement Q
-            while (Q[k] != '\0')
+            if (p[l] != s[l + i])
             {
-                cout << Q[k];
-                k++;
+                break;
             }
-
-            i = i + j;   // skip matched part
-            found = 1;
         }
-        else
+
+        if (l == s2)
         {
-            cout << T[i];
-            i++;
+            flag = true;
+            loc = i;
+            break;
         }
     }
+
+    if (flag)
+    {
+        cout << "Pattern found at : " << loc << endl;
+    }
+    else
+    {
+        cout << "Pattern not found\n";
+        return 0;
+    }
+
+    string ans = "";
+
+    string q;
+    getline(cin, q);
+
+    int s3 = q.length();
+
+    for (int i = 0; i < loc; i++)
+    {
+        ans += s[i];
+    }
+
+    ans += q;
+
+    for (int i = s3 + loc; i < s1; i++)
+    {
+        ans += s[i];
+    }
+
+    cout << ans << endl;
 
     return 0;
 }

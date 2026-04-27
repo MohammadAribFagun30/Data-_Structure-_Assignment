@@ -1,41 +1,25 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    char T[1000], S[1000], result[1000];
+    string t;
+    cin >> t;
+    int l, k;
+    cin >> k >> l;
 
-    cin >> T >> S;
+    string ans = "";
 
-    int i = 0, k = 0;
-
-    while (T[i] != '\0')
+    for (int i = 0; i < k; i++)
     {
-
-        int j = 0;
-
-        // check if S matches at position i
-        while (S[j] != '\0' && T[i + j] == S[j])
-        {
-            j++;
-        }
-
-        // if full match found
-        if (S[j] == '\0')
-        {
-            
-            i = i + j; // skip S
-        }
-        else
-        {
-            result[k++] = T[i];
-            i++;
-        }
+        ans += t[i];
     }
 
-    result[k] = '\0';
+    for (int i = l + k; i < t.length(); i++)
+    {
+        ans += t[i];
+    }
 
-    cout << result;
+    cout << ans << endl;
 
     return 0;
 }

@@ -1,39 +1,31 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    char T[100], S[50], result[150];
+    string s;
+    cin >> s;
 
-    cin.getline(T, 100);
-    cin.getline(S, 50);
+    string t;
+    cin >> t;
 
-    int K;
-    cin >> K;
+    int k;
+    cin >> k;
 
-    int i = 0, j = 0, k = 0;
+    string ans = "";
 
-    // copy first part of T
-    while (i < K && T[i] != '\0')
+    for (int i = 0; i < k; i++)
     {
-        result[k++] = T[i++];
+        ans += t[i];
     }
 
-    // insert S
-    while (S[j] != '\0')
+    ans += s;
+
+    for (int i = k; i < t.length(); i++)
     {
-        result[k++] = S[j++];
+        ans += t[i];
     }
 
-    // copy remaining T
-    while (T[i] != '\0')
-    {
-        result[k++] = T[i++];
-    }
-
-    result[k] = '\0';
-
-    cout << result;
+    cout << ans << endl;
 
     return 0;
 }
