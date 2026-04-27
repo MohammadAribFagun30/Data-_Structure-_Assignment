@@ -67,7 +67,9 @@ int main()
         while (ptr != NULL)
         {
             if (x < ptr->num)
+            {
                 break;
+            }
 
             save = ptr;      // 20
             ptr = ptr->next; // 30

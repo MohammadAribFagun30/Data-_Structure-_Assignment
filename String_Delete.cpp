@@ -9,14 +9,14 @@ int main()
 
     int index;
     cout << "index to delete : ";
-    cin>>index;
+    cin >> index;
 
-    while (len >= index)
+    for (int i = index; i < len - 1; i++)
     {
-        s[index] = s[index + 1];
-        index++;
+        s[i] = s[i + 1];
     }
-    len--;
+
+    s.resize(len - 1);
 
     cout << "After Deleting : " << s;
 

@@ -13,6 +13,7 @@ int main()
     ptr = start;
 
     int n;
+    cout << "Enter element number : ";
     cin >> n;
 
     for (int i = 1; i <= n; i++)

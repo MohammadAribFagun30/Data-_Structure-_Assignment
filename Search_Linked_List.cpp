@@ -62,6 +62,7 @@ int main()
         ptr = ptr->next;
         pos++;
     }
+    cout << "Not found !! " << endl;
 
     return 0;
 }

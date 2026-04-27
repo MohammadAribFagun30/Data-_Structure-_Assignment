@@ -51,6 +51,8 @@ int main()
         ptr = ptr->next;
     }
 
+    //ptr->next = 0;
+
     newnode->next = ptr->next;
     ptr->next = newnode;
 
