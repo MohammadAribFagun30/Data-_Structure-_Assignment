@@ -1,16 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-class Node
+struct Node
 {
-public:
-    int number;
-    Node *next;
+    int number; 
+    Node *next; 
 };
-// struct Node
-// {
-//     int number;
-//     Node *next;
-// };
 int main()
 {
     Node *start, *ptr;
@@ -24,7 +18,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         cout << "Input a number : ";
-        cin >> ptr->number;
+        cin >> ptr->number; 
 
         if (i != n)
         {
@@ -34,35 +28,47 @@ int main()
     }
 
     ptr->next = NULL;
-
+    
     cout << "Elements in Link List are : ";
 
     ptr = start;
 
     while (ptr != NULL)
     {
-
         cout << ptr->number << " ";
         ptr = ptr->next;
     }
+    
     cout << endl;
+    int ITEM;
+    cout << "Enter element to search: ";
+    cin >> ITEM;
 
-    int x;
-    cout << "Enter element to search : ";
-    cin >> x;
     ptr = start;
-    int pos = 1;
+    int position = 1;
+    bool found = false;
 
+    
     while (ptr != NULL)
     {
-        if (x == ptr->number)
+        if (ptr->number == ITEM)
         {
-            cout << "Found at position: " << pos << endl;
+            cout << "Item found..!" << endl;
+            cout << "Position: " << position << endl;
+            cout << "Address: " << ptr << endl;
+
+            found = true;
+            break;
         }
+
         ptr = ptr->next;
-        pos++;
+        position++;
     }
-    cout << "Not found !! " << endl;
+
+    if (!found)
+    {
+        cout << "Item not found in the list";
+    }
 
     return 0;
 }
