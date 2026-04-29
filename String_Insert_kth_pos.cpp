@@ -24,6 +24,7 @@ int main()
     {
         ans += t[i];
     }
+    cout << "After inserting : ";
 
     cout << ans << endl;
 

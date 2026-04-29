@@ -2,35 +2,35 @@
 using namespace std;
 int main()
 {
-    string t; // abcdef --- 6
+    string t; 
     cin >> t;
 
-    string p; // cd
+    string p;
     cin >> p;
 
-    int r = t.length(); // 6
-    int s = p.length(); // 2
+    int r = t.length();
+    int s = p.length();
 
     int k = 0;
-    int max = r - s + 1; // 6 - 2 + 1 == 5
+    int max = r - s + 1;
     int index = -1;
 
-    while (k < max) // 2 < 5
+    while (k < max)
     {
         int l;
 
-        for (l = 1; l <= s; l++) // 2
+        for (l = 1; l <= s; l++) 
         {
-            if (p[l] != t[l + k]) // p[1] == d != t[3] == d
+            if (p[l] != t[l + k])
             {
                 break;
             }
         }
-        // l = 2
+    
 
         if (l == s)
         {
-            index = k; // 2
+            index = k; 
             break;
         }
 

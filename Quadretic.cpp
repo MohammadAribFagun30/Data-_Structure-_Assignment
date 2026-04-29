@@ -6,18 +6,18 @@ int main()
     int a, b, c;
     cin >> a >> b >> c;
 
-    double d = (b * b) - (4 * a * c);
+    double d = (double)(b * b) - (4 * a * c);
 
     if (d > 0)
     {
-        double r1 = (-b + (sqrt(d))) / (2 * a);
+        double r1 = (double)(-b + (sqrt(d))) / (2 * a);
         cout << "First root : " << r1 << endl;
-        double r2 = (-b - (sqrt(d))) / (2 * a);
+        double r2 =(double) (-b - (sqrt(d))) / (2 * a);
         cout << "Second root : " << r2 << endl;
     }
     else if (d == 0)
     {
-        double r = -b / (2 * a);
+        double r = (double)(-b / (2 * a));
         cout << "Unique root : " << r << endl;
     }
     else

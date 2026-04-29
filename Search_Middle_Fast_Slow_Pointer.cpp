@@ -12,8 +12,8 @@ int main()
 {
     Node *start, *ptr;
     start = new Node();
+    
     ptr = start;
-
     int n;
     cin >> n;
 
@@ -36,8 +36,8 @@ int main()
 
     while (fast != NULL && fast->next != NULL)
     {
-        slow = slow->next;         // move 1 step
-        fast = fast->next->next;   // move 2 steps
+        slow = slow->next;       // move 1 step
+        fast = fast->next->next; // move 2 steps
     }
 
     cout << "Middle element: " << slow->num << endl;

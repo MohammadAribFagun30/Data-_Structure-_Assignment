@@ -35,7 +35,7 @@ int main()
     arr[position] = x;
 
     cout << "After Inserting : " << endl;
-    for (i = 1; i <= n; i++)
+    for (i = 1; i <= n+1; i++)
     {
         cout << arr[i] << " ";
     }

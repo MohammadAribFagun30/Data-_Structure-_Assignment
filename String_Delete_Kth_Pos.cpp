@@ -5,7 +5,14 @@ int main()
     string t;
     cin >> t;
     int l, k;
-    cin >> k >> l;
+
+    string s;
+    cin >> s;
+
+    l = s.length();
+    
+    cout << "Enter the position : ";
+    cin >> k;
 
     string ans = "";
 
