@@ -1,36 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int main()
 {
-    int row, col;
-    cin >> row >> col;
-    
-    int matrix[row][col];
+    int n, k;
+    cin >> n;
+    int a[n];
 
-    int Tranmatrix[row][col];
-
-    for (int i = 0; i < row; i++)
+    for (int i = 1; i <= n; i++)
     {
-        for (int j = 0; j < col; j++)
-        {
-            cin >> matrix[i][j];
-        }
+        cin >> a[i];
     }
 
-    for (int i = 0; i < col; i++)
+    k = 1;
+    cout << "Array is ";
+    while (k <= n)
     {
-        for (int j = 0; j < row; j++)
-        {
-            Tranmatrix[i][j] = matrix[j][i];
-        }
+        cout << a[k] << " ";
+        k++;
     }
-    for (int i = 0; i < col; i++)
-    {
-        for (int j = 0; j < row; j++)
-        {
-            cout << Tranmatrix[i][j] << " ";
-        }
-        cout << "  \n  ";
-    }
+
     return 0;
 }

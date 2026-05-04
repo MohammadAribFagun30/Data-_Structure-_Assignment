@@ -1,61 +1,49 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
-    int r, c, p, i, j;
-    cin >> r >> c;
-    int arr[r][c];
- 
-    
-    for (i = 1; i <= r; i++)
+    int row, col;
+    cin >> row >> col;
+
+    int matrix[row][col];
+
+    int Tranmatrix[row][col];
+
+    for (int i = 0; i < row; i++)
     {
-        for (j = 1; j <= c; j++)
+        for (int j = 0; j < col; j++)
         {
-            cin >> arr[i][j];
+            cin >> matrix[i][j];
         }
     }
-    cout << endl;
+    cout << "Matrix before interchange : " << endl;
 
-    cout << "Array Before Interchange : " << endl;
-
-    for (i = 1; i <= r; i++)
+    for (int i = 0; i < row; i++)
     {
-        for (j = 1; j <= c; j++)
+        for (int j = 0; j < col; j++)
         {
-            cout << arr[i][j] << " ";
-        }
-        cout << endl;
-    }
-    cout << endl;
-
-    for (i = 1; i <= r; i++)
-    {
-        for (j = 1; j <= p; j++)
-        {
-            if (i == j)
-            {
-                arr[i][j] = arr[i][j];
-            }
-            else if (i > j)
-            {
-                int temp = arr[i][j];
-                arr[i][j] = arr[j][i];
-                arr[j][i] = temp;
-            }
-        }
-    }
-    cout << endl;
-    cout << "Array After Interchange : " << endl;
-
-    for (i = 1; i <= r; i++)
-    {
-        for (j = 1; j <= c; j++)
-        {
-            cout << arr[i][j] << " ";
+            cout << matrix[i][j] << " ";
         }
         cout << endl;
     }
+    cout << endl;
 
+    for (int i = 0; i < col; i++)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            Tranmatrix[i][j] = matrix[j][i];
+        }
+    }
+
+    cout << "Matrix after interchange : " << endl;
+    for (int i = 0; i < col; i++)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            cout << Tranmatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }

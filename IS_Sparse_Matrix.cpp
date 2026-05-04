@@ -24,7 +24,7 @@ int main()
     }
 
     int count_zero = 0;
-    int cout_nonzero = 0;
+   
     for (i = 1; i <= r; i++)
     {
         for (j = 1; j <= c; j++)

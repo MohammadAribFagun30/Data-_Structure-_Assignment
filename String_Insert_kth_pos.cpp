@@ -2,12 +2,12 @@
 using namespace std;
 int main()
 {
+     string t;
+    cin >> t;
     string s;
     cin >> s;
 
-    string t;
-    cin >> t;
-
+   
     int k;
     cin >> k;
 

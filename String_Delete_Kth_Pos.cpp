@@ -4,6 +4,7 @@ int main()
 {
     string t;
     cin >> t;
+    
     int l, k;
 
     string s;
