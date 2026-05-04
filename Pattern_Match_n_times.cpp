@@ -42,7 +42,7 @@ int main()
         string q;
         getline(cin, q);
 
-        // ✅ If not found, just print original string
+        //  If not found, just print original string
         if (!flag)
         {
             cout << s << endl;
