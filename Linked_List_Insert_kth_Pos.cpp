@@ -66,12 +66,7 @@ int main()
             ptr = ptr->next;
         }
 
-        if (ptr == NULL)
-        {
-            cout << "Invalid position\n";
-            return 0;
-        }
-
+       
         //  insert
         NEW->next = ptr->next;
         ptr->next = NEW;
