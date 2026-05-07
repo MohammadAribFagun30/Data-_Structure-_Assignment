@@ -227,7 +227,7 @@ int main()
         }
         else if (choice == 3)
         {
-            searching();
+            searching();     
         }
 
     } while (choice != 0);
