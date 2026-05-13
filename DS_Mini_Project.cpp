@@ -1,48 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Node
 {
 public:
     int num;
     Node *next;
 };
+
 Node *start = NULL, *ptr, *NEW;
 
 int menu(void)
 {
-    cout<<endl;
+    cout << endl;
+
     int choice = -1;
+
     while (choice < 0 || choice > 3)
     {
         cout << "1--insert" << endl;
         cout << "2--delete" << endl;
         cout << "3--search" << endl;
         cout << "0--exit" << endl;
-         cout<<endl;
 
+        cout << endl;
         cout << "Enter Your choice : ";
         cin >> choice;
     }
+
     return choice;
 }
 
 void insert()
 {
-     cout<<endl;
+    cout << endl;
+
     cout << "Insert number : ";
     int x;
     cin >> x;
-
-    cout << "Enter position (k) : ";
-    int k;
-    cin >> k;
 
     NEW = new Node();
     NEW->num = x;
     NEW->next = NULL;
 
-    // Case 1: insert at beginning
-    if (k == 1)
+    
+    if (start == NULL || x < start->num)
     {
         NEW->next = start;
         start = NEW;
@@ -51,19 +53,21 @@ void insert()
     {
         ptr = start;
 
-        for (int i = 1; i < k - 1; i++)
+       
+        while (ptr->next != NULL && ptr->next->num < x)
         {
             ptr = ptr->next;
         }
 
-        //  insert
         NEW->next = ptr->next;
         ptr->next = NEW;
     }
 }
+
 void deleteing()
 {
-     cout<<endl;
+    cout << endl;
+
     cout << "Input number to delete : ";
     int x;
     cin >> x;
@@ -115,12 +119,15 @@ void deleteing()
 
 void searching()
 {
-     cout<<endl;
+    cout << endl;
+
     int ITEM;
+
     cout << "Enter element to search: ";
     cin >> ITEM;
 
     ptr = start;
+
     int position = 1;
     bool found = false;
 
@@ -145,36 +152,39 @@ void searching()
         cout << "Item not found in the list";
     }
 }
+
 void display()
 {
-    cout<<endl;
+    cout << endl;
 
     cout << "After Operation : ";
+
     ptr = start;
+
     while (ptr != NULL)
     {
         cout << ptr->num << " ";
         ptr = ptr->next;
     }
+
     cout << endl;
 }
 
 int main()
 {
-    
     start = new Node();
     ptr = start;
 
     cout << "How many elements : ";
+
     int n;
     cin >> n;
 
-    srand(time(0)); // seed for random numbers
+    srand(time(0));
 
-    // Create linked list with random numbers
     for (int i = 1; i <= n; i++)
     {
-        ptr->num = rand() % 100; // random number (0–99)
+        ptr->num = rand() % 100;
 
         if (i != n)
         {
@@ -182,10 +192,25 @@ int main()
             ptr = ptr->next;
         }
     }
+
     ptr->next = NULL;
 
-    // SORTING (Bubble Sort)
+    
+    cout << "Original Linked List : ";
+
+    ptr = start;
+
+    while (ptr != NULL)
+    {
+        cout << ptr->num << " ";
+        ptr = ptr->next;
+    }
+
+    cout << endl;
+
+    
     Node *i, *j;
+
     for (i = start; i != NULL; i = i->next)
     {
         for (j = i->next; j != NULL; j = j->next)
@@ -199,14 +224,17 @@ int main()
         }
     }
 
-    // Print sorted list
+    
     cout << "Sorted Linked List : ";
+
     ptr = start;
+
     while (ptr != NULL)
     {
         cout << ptr->num << " ";
         ptr = ptr->next;
     }
+
     cout << endl;
 
     int choice;
@@ -227,11 +255,12 @@ int main()
         }
         else if (choice == 3)
         {
-            searching();     
+            searching();
         }
 
     } while (choice != 0);
 
     cout << "End of operation" << endl;
+
     return 0;
 }
