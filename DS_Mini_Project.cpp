@@ -178,7 +178,7 @@ int main()
     int n;
     cin >> n;
 
-    // No srand() used here
+    
 
     for (int i = 1; i <= n; i++)
     {
@@ -205,7 +205,7 @@ int main()
 
     cout << endl;
 
-    // Sorting linked list
+    
     Node *i, *j;
 
     for (i = start; i != NULL; i = i->next)
