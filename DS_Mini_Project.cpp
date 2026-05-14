@@ -43,7 +43,6 @@ void insert()
     NEW->num = x;
     NEW->next = NULL;
 
-    
     if (start == NULL || x < start->num)
     {
         NEW->next = start;
@@ -53,7 +52,6 @@ void insert()
     {
         ptr = start;
 
-       
         while (ptr->next != NULL && ptr->next->num < x)
         {
             ptr = ptr->next;
@@ -149,7 +147,7 @@ void searching()
 
     if (!found)
     {
-        cout << "Item not found in the list";
+        cout << "Item not found in the list" << endl;
     }
 }
 
@@ -180,7 +178,7 @@ int main()
     int n;
     cin >> n;
 
-    srand(time(0));
+    // No srand() used here
 
     for (int i = 1; i <= n; i++)
     {
@@ -195,7 +193,6 @@ int main()
 
     ptr->next = NULL;
 
-    
     cout << "Original Linked List : ";
 
     ptr = start;
@@ -208,7 +205,7 @@ int main()
 
     cout << endl;
 
-    
+    // Sorting linked list
     Node *i, *j;
 
     for (i = start; i != NULL; i = i->next)
@@ -224,7 +221,6 @@ int main()
         }
     }
 
-    
     cout << "Sorted Linked List : ";
 
     ptr = start;
