@@ -32,7 +32,7 @@ int main()
         {
             sum += a[i][j];
         }
-        cout << j << " Colum sum of array is : " << sum << endl;
+        cout << j << " Coulum sum of array is : " << sum << endl;
         j++;
     }
 
