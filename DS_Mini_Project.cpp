@@ -221,7 +221,7 @@ int main()
         }
     }
 
-    cout << "Sorted Linked List : ";
+    cout << "Sorted Linked List is : ";
 
     ptr = start;
 
