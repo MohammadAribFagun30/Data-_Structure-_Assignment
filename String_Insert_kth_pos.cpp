@@ -2,12 +2,11 @@
 using namespace std;
 int main()
 {
-     string t;
+    string t;
     cin >> t;
     string s;
     cin >> s;
 
-   
     int k;
     cin >> k;
 
@@ -20,7 +19,7 @@ int main()
 
     ans += s;
 
-    for (int i = k; i < t.length(); i++)
+    for (int i = k ; i < t.length(); i++)
     {
         ans += t[i];
     }
