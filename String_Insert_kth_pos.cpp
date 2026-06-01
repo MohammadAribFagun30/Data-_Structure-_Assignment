@@ -10,6 +10,7 @@ int main()
     int k;
     cin >> k;
 
+    
     string ans = "";
 
     for (int i = 0; i < k; i++)
